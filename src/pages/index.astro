@@ -1,12 +1,34 @@
-<html lang="en">
+---
+import "../styles/global.css";
+---
+
+<html lang="sk">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>Svadba Teres a Adam</title>
     </head>
     <body>
-        <h1>Astro</h1>
+        <header>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#home">Domov</a></li>
+                    <li><a href="#wedding">Svadba</a></li>
+                    <li><a href="#venue">Miesto konania</a></li>
+                    <li><a href="#gifts">Dary</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <img src="/src/images/main.JPG" />
+                <div class="teres-adam">
+                    <h1>Teres a Adam</h1>
+                    <h3>30.2.2026</h3>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
