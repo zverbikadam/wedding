@@ -1,58 +1,95 @@
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    z-index: 1000;
-    box-shadow: none;
+html {
+    scroll-behavior: smooth;
 }
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: #303133;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-list a:hover {
-    color: #5b5e5f;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    height: 200vh;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    padding-top: 60px;
-    background-color: #8499b2;
+    background-image: url("/src/images/main.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.container {
-    position: relative;
+header {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: snow;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+main {
+    scroll-snap-type: y mandatory;
+}
+
+.card {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    scroll-snap-align: start;
+
+    margin: 0 auto;
+    padding: 4rem;
+
+    max-width: 900px;
+
+    border-radius: 1.5rem;
+    color: snow;
+}
+
+.hero {
     text-align: center;
+    color: snow;
 }
 
-.teres-adam {
-    position: absolute;
-    color: #303133;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.hero h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.hero h3::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+    margin: 1.5rem auto;
+}
+
+.hero h1,
+.hero h3 {
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
