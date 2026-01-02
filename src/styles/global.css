@@ -10,6 +10,7 @@ body {
 
 body {
     background-image: url("/src/images/main.jpeg");
+    background-color: #fffdf5;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,7 +32,7 @@ header {
 }
 
 .nav-list a {
-    color: snow;
+    color: #fffdf5;
     text-decoration: none;
     font-weight: 500;
 }
@@ -80,16 +81,53 @@ main {
     opacity: 0.85;
 }
 
-.hero h3::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.6);
-    margin: 1.5rem auto;
-}
-
 .hero h1,
 .hero h3 {
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.invitation-img {
+    max-height: 90vh;
+    width: auto;
+    object-fit: contain;
+}
+
+.invite-card {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+/* shared image rules */
+.invite-card img {
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* center invitation (main focus) */
+.invitation-img {
+    max-height: 90vh;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* fill screen, crop sides if needed */
+        background-position: center; /* keep center visible */
+        background-repeat: no-repeat;
+    }
+
+    .invite-card {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .invite-card img {
+        max-width: 90vw;
+        max-height: none;
+    }
 }
