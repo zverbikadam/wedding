@@ -16,24 +16,127 @@ import "../styles/global.css";
     <body>
         <header>
             <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="#home">Teres a Adam</a></li>
-                    <li><a href="#invitation">Pozvánka</a></li>
-                    <li><a href="#program">Program</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#info">Ďalšie informácie</a></li>
-                </ul>
+                <div class="nav-inner">
+                    <div class="logo"><a href="#home">T&A</a></div>
+
+                    <button class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-list" id="nav">
+                        <li><a href="#invitation">Pozvánka</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#info">Ďalšie informácie</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
         <main>
-            <section id="home" class="card hero">
-                <h1>Teres a Adam</h1>
-                <h3>12.09.2026</h3>
+            <!-- HERO -->
+            <section id="home" class="hero">
+                <h2>S RADOSŤOU VÁM OZNAMUJEME,</h2>
+                <h2>ŽE SME SA ROZHODLI SPOJIŤ SVOJE ŽIVOTY.</h2>
+                <img
+                    src="/src/images/ornament.png"
+                    class="hero-image"
+                    alt="ornament"
+                />
+                <h1>ADAM ZVERBÍK</h1>
+                <h1>&</h1>
+                <h1>TERÉZIA IKRÉNYIOVÁ</h1>
+                <h3>12 SEPTEMBER 2026</h3>
+                <h3>SOBOTA 15:30</h3>
+                <h3>CASTEL MIEROVO</h3>
             </section>
-            <section id="invitation" class="invite-card">
-                <img class="invitation-img" src="/src/images/invitation.png" />
+            <section id="invitation" class="invite-card"></section>
+
+            <section id="menu" class="menu-wrapper">
+                <div class="menu-card">
+                    <div class="title"><h3>MENU</h3></div>
+
+                    <div class="section">
+                        <div class="section-title">APERITÍV:</div>
+                        <ul>
+                            <li>Prosecco Rebuli Brut Treviso DOC</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">POLIEVKA:</div>
+                        <ul>
+                            <li>
+                                Kurací vývar, trhané mäso, koreňová zelenina,
+                                rezance od babičky
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-title">HLAVNÉ JEDLO:</div>
+                        <ul>
+                            <li>
+                                Panenka Mediterranea (plnka z prosciutta,
+                                mozzarelly a sušených paradajok), krémové
+                                rizoto, pečený zemiak s rozmarínom, hnedá sauce,
+                                pečená koreňová zelenina
+                            </li>
+                            <li>
+                                VEGE – grilovaná cuketová rolka plnená s vegan
+                                syrom a cherry paradajkami, zeleninový bulgur
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <script is:inline>
+            document.addEventListener("DOMContentLoaded", () => {
+                const burger = document.getElementById("burger");
+                const nav = document.getElementById("nav");
+
+                const toggleMenu = () => {
+                    nav.classList.toggle("active");
+
+                    // lock scroll
+                    if (nav.classList.contains("active")) {
+                        document.body.style.overflow = "hidden";
+                    } else {
+                        document.body.style.overflow = "";
+                    }
+                };
+
+                const closeMenu = () => {
+                    nav.classList.remove("active");
+                    document.body.style.overflow = "";
+                };
+
+                // klik na burger
+                burger?.addEventListener("click", toggleMenu);
+
+                // klik na link
+                document.querySelectorAll(".nav-list a").forEach((link) => {
+                    link.addEventListener("click", closeMenu);
+                });
+
+                // ESC key
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape") {
+                        closeMenu();
+                    }
+                });
+
+                // klik mimo menu
+                nav?.addEventListener("click", (e) => {
+                    if (e.target === nav) {
+                        closeMenu();
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
