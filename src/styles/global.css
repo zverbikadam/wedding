@@ -1,3 +1,7 @@
+html {
+    font-size: 62.5%;
+}
+
 @font-face {
     font-family: "Frunchy Sage";
     src: url("/fonts/frunchy-sage.ttf") format("truetype");
@@ -46,7 +50,7 @@ header.scrolled {
     text-decoration: none;
     color: #af8568;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 2rem;
     position: relative;
     transition: 0.3s;
 }
@@ -69,33 +73,35 @@ header.scrolled {
 /* ===== HERO ===== */
 .hero {
     text-align: center;
-    padding: 60px 20px 40px;
 }
 
 .hero-image {
     display: block;
     margin: 20px auto;
-    max-width: 20%; /* uprav podľa potreby */
-    opacity: 0.8; /* jemnejší look */
+    max-width: 25%;
 }
 
-.hero h1 {
-    font-size: 40px;
+h1 {
+    font-size: 3rem;
     letter-spacing: 6px;
     margin: 0;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    font-weight: 650;
+}
+
+h3 {
+    font-size: 2rem;
     font-weight: 500;
+    letter-spacing: 3px;
 }
 
-.hero h2 {
-    font-size: 30px;
-    letter-spacing: 3px;
-    font-weight: 300;
-}
-
-.hero h3 {
-    font-size: 25px;
-    font-weight: 300;
-    letter-spacing: 3px;
+h3 link {
+    color:#af8568;
 }
 
 /* ===== MENU ===== */
@@ -105,25 +111,26 @@ header.scrolled {
     padding: 40px 20px 80px;
 }
 
+.menu-wrapper h1 {
+    font-size: 4rem;
+}
+.menu-wrapper h2,h3 {
+    font-size: 3.5rem;
+}
+/* .menu-wrapper h3 {
+    font-size: 3.5rem;
+} */
+
+.menu-wrapper p {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
 .menu-card {
     max-width: 500px;
     text-align: center;
-}
-
-.title {
-    font-size: 28px;
-    letter-spacing: 6px;
-    margin-bottom: 30px;
-}
-
-.section {
-    margin-bottom: 25px;
-}
-
-.section-title {
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
 }
 
 ul {
@@ -140,17 +147,22 @@ li {
 /* NAV WRAPPER */
 .nav-inner {
     width: 100%;
-    max-width: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 /* LOGO */
 .logo {
     font-size: 18px;
     letter-spacing: 3px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #af8568;
 }
 
 /* BURGER */
@@ -206,6 +218,10 @@ li {
     .nav-list.active {
         opacity: 1;
         pointer-events: all;
+    }
+
+    .hero-image {
+        max-width: 100%;
     }
 }
 

@@ -3,140 +3,169 @@ import "../styles/global.css";
 ---
 
 <html lang="sk">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap"
-            rel="stylesheet"
-        />
-        <meta name="viewport" content="width=device-width" />
-        <title>Svadba Teres a Adam</title>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="nav-inner">
-                    <div class="logo"><a href="#home">T&A</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <title>Svadba Teres a Adam</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-inner">
+          <div class="logo"><a href="#home">T&A</a></div>
 
-                    <button class="burger" id="burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+          <button class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-                    <ul class="nav-list" id="nav">
-                        <li><a href="#invitation">Pozvánka</a></li>
-                        <li><a href="#program">Program</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#info">Ďalšie informácie</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+          <ul class="nav-list" id="nav">
+            <li><a href="#program">Program</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#info">Ďalšie informácie</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        <main>
-            <!-- HERO -->
-            <section id="home" class="hero">
-                <h2>S RADOSŤOU VÁM OZNAMUJEME,</h2>
-                <h2>ŽE SME SA ROZHODLI SPOJIŤ SVOJE ŽIVOTY.</h2>
-                <img
-                    src="/src/images/ornament.png"
-                    class="hero-image"
-                    alt="ornament"
-                />
-                <h1>ADAM ZVERBÍK</h1>
-                <h1>&</h1>
-                <h1>TERÉZIA IKRÉNYIOVÁ</h1>
-                <h3>12 SEPTEMBER 2026</h3>
-                <h3>SOBOTA 15:30</h3>
-                <h3>CASTEL MIEROVO</h3>
-            </section>
-            <section id="invitation" class="invite-card"></section>
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <h2>S RADOSŤOU VÁM OZNAMUJEME,</h2>
+        <h2>ŽE SME SA ROZHODLI SPOJIŤ SVOJE ŽIVOTY.</h2>
+        <img src="/src/images/ornament.png" class="hero-image" alt="ornament" />
+        <h1>ADAM ZVERBÍK</h1>
+        <h1>&</h1>
+        <h1>TERÉZIA IKRÉNYIOVÁ</h1>
+        <h3>12 SEPTEMBER 2026</h3>
+        <h3>SOBOTA 15:30</h3>
+        <h3>
+          <a
+            class="link"
+            href="https://new.castelmierovo.sk/kontakt"
+            target="_blank">CASTEL MIEROVO</a
+          >
+        </h3>
+      </section>
 
-            <section id="menu" class="menu-wrapper">
-                <div class="menu-card">
-                    <div class="title"><h3>MENU</h3></div>
+      <section id="program" class="menu-wrapper">
+        <div class="menu-card">
+          <h1>PROGRAM</h1>
 
-                    <div class="section">
-                        <div class="section-title">APERITÍV:</div>
-                        <ul>
-                            <li>Prosecco Rebuli Brut Treviso DOC</li>
-                        </ul>
-                    </div>
+          <div class="section">
+            <p>Bude doplnené neskôr</p>
+          </div>
+        </div>
+      </section>
 
-                    <div class="section">
-                        <div class="section-title">POLIEVKA:</div>
-                        <ul>
-                            <li>
-                                Kurací vývar, trhané mäso, koreňová zelenina,
-                                rezance od babičky
-                            </li>
-                        </ul>
-                    </div>
+      <section id="menu" class="menu-wrapper">
+        <div class="menu-card">
+          <h1>MENU</h1>
+          <h3>APERITÍV</h3>
+          <p>Prosecco Rebuli Brut Treviso DOC</p>
+          <h3>POLIEVKA</h3>
+          <p>
+            Kurací vývar, trhané mäso, koreňová zelenina, rezance od babičky
+          </p>
+          <h3>HLAVNÉ JEDLO</h3>
+          <p>
+            Panenka Mediterranea (plnka z prosciutta, mozzarelly a sušených
+            paradajok), krémové rizoto, pečený zemiak s rozmarínom, hnedá sauce,
+            pečená koreňová zelenina
+          </p>
+          <p>
+            Vegetariánska možnosť: grilovaná cuketová rolka plnená s vegan syrom a cherry
+            paradajkami, zeleninový bulgur
+          </p>
+      </section>
 
-                    <div class="section">
-                        <div class="section-title">HLAVNÉ JEDLO:</div>
-                        <ul>
-                            <li>
-                                Panenka Mediterranea (plnka z prosciutta,
-                                mozzarelly a sušených paradajok), krémové
-                                rizoto, pečený zemiak s rozmarínom, hnedá sauce,
-                                pečená koreňová zelenina
-                            </li>
-                            <li>
-                                VEGE – grilovaná cuketová rolka plnená s vegan
-                                syrom a cherry paradajkami, zeleninový bulgur
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
+      <section id="info" class="menu-wrapper">
+        <div class="menu-card">
+          <h1>ĎAĽŠIE INFORMÁCIE</h1>
 
-        <script is:inline>
-            document.addEventListener("DOMContentLoaded", () => {
-                const burger = document.getElementById("burger");
-                const nav = document.getElementById("nav");
+          <div class="section">
+            <h2>Miesto Konania</h2>
+            <p>
+              <a
+                class="link"
+                href="https://new.castelmierovo.sk/kontakt"
+                target="_blank">Castel Mierovo</a
+              >
+            </p>
+            <p>Mierovo 20</p>
+            <p>930 41 Mierovo</p>
+            <p>Slovenská republika</p>
+            <h2>Možnosti ubytovania v okolí</h2>
+            <h2>Odvoz domov</h2>
+            <h2>Alkohol</h2>
+            <p>
+              Chceli by sme Vás poprosiť, ak neplánujete piť ani prípitok, dajte
+              nám prosím vopred vedieť, nech Vám objednáme nealkoholickú verziu.
+            </p>
+            <h2>Informácie k darom</h2>
+            <h2>+1 a deti</h2>
+            <p>
+              Z kapacitných a finančných dôvodov nie je možné každému umožniť
+              zobrať so sebou doprovod. Veríme, že sa aj tak zabavíte.
+            </p>
+            <p>
+              Boli by sme radi, ak by ste rešpektovali skutočnosť, že by sme si
+              radi užili svadbu v kruhu rodiny a priateľov, bez ratolestí.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-                const toggleMenu = () => {
-                    nav.classList.toggle("active");
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.getElementById("burger");
+        const nav = document.getElementById("nav");
 
-                    // lock scroll
-                    if (nav.classList.contains("active")) {
-                        document.body.style.overflow = "hidden";
-                    } else {
-                        document.body.style.overflow = "";
-                    }
-                };
+        const toggleMenu = () => {
+          nav.classList.toggle("active");
 
-                const closeMenu = () => {
-                    nav.classList.remove("active");
-                    document.body.style.overflow = "";
-                };
+          // lock scroll
+          if (nav.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        };
 
-                // klik na burger
-                burger?.addEventListener("click", toggleMenu);
+        const closeMenu = () => {
+          nav.classList.remove("active");
+          document.body.style.overflow = "";
+        };
 
-                // klik na link
-                document.querySelectorAll(".nav-list a").forEach((link) => {
-                    link.addEventListener("click", closeMenu);
-                });
+        // klik na burger
+        burger?.addEventListener("click", toggleMenu);
 
-                // ESC key
-                document.addEventListener("keydown", (e) => {
-                    if (e.key === "Escape") {
-                        closeMenu();
-                    }
-                });
+        // klik na link
+        document.querySelectorAll(".nav-list a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
 
-                // klik mimo menu
-                nav?.addEventListener("click", (e) => {
-                    if (e.target === nav) {
-                        closeMenu();
-                    }
-                });
-            });
-        </script>
-    </body>
+        // ESC key
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeMenu();
+          }
+        });
+
+        // klik mimo menu
+        nav?.addEventListener("click", (e) => {
+          if (e.target === nav) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
