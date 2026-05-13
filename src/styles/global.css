@@ -67,6 +67,20 @@ header {
   font-weight: bold;
 }
 
+.main-image {
+  width: 75%;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.main-image {
+  display: initial;
+}
+
+.save-the-date-image {
+  display: none;
+}
+
 /* ===== HERO ===== */
 .hero {
   text-align: center;
@@ -203,6 +217,17 @@ li {
   .nav-list.active {
     opacity: 1;
     pointer-events: all;
+  }
+
+  .main-image {
+    display: none;
+  }
+
+  .save-the-date-image {
+    display: initial;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 80%;
   }
 
   .hero-image {
