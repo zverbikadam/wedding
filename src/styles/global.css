@@ -84,6 +84,7 @@ header {
 .hero {
   text-align: center;
   margin: auto;
+  padding-bottom: 15px;
 }
 
 .hero-image {
@@ -123,6 +124,8 @@ header {
 .card-wrapper {
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #af8568;
+  padding-bottom: 30px;
 }
 
 .card-wrapper h1 {
@@ -187,6 +190,11 @@ li {
   display: flex;
   gap: 40px;
   margin: 0;
+}
+
+.section {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 /* MOBILE */
