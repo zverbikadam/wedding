@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import ornament from "../images/ornament.png";
+import main_image from "../images/main-image.jpg";
+import save_the_date from "../images/save-the-date.jpg";
 ---
 
 <html lang="sk">
@@ -42,12 +45,12 @@ import "../styles/global.css";
       <!-- HOME -->
       <section id="home" class="hero">
         <img
-          src="/src/images/main-image.jpg"
+          src={main_image.src}
           class="main-image"
           alt="main-image"
         />
         <img
-          src="/src/images/save-the-date.jpg"
+          src={save_the_date.src}
           class="save-the-date-image"
           alt="save-the-date"
         />
@@ -57,7 +60,7 @@ import "../styles/global.css";
       <section id="invitation" class="hero">
         <h2>S RADOSŤOU VÁM OZNAMUJEME,</h2>
         <h2>ŽE SME SA ROZHODLI SPOJIŤ SVOJE ŽIVOTY.</h2>
-        <img src="/src/images/ornament.png" class="hero-image" alt="ornament" />
+        <img src={ornament.src} class="hero-image" alt="ornament" />
         <h1>ADAM ZVERBÍK</h1>
         <h1>&</h1>
         <h1>TERÉZIA IKRÉNYIOVÁ</h1>
